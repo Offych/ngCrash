@@ -1,5 +1,7 @@
 <div class="task" [ngClass]="{reminder: task.reminder}"
 (dblclick)="onToggle(task)" >
-  <h3>{{task.text}} <fa-icon (click)="onDelete(task)" [ngStyle]="{color: 'red'}" [icon]="faTimes"></fa-icon></h3>
+  <h3>{{task.text}}
+    <fa-icon (click)="onDelete(task)" [ngStyle]="{color: 'red'}" [icon]="faTimes"></fa-icon></h3>
   <p>{{task.day}}</p>
+  <button class="btn"(click)="onEdit(task)" [routerLink]="['/edit', task.id]">Edit</button>
 </div>

@@ -11,10 +11,12 @@ import {HttpClientModule} from "@angular/common/http";
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import {FormsModule} from "@angular/forms";
 import {RouterModule, Routes} from "@angular/router";
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: TasksComponent}
+  { path: '', component: TasksComponent},
+  { path: 'edit/:id', component: EditTaskComponent}
 ]
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     ButtonComponent,
     TasksComponent,
     TaskItemComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,
